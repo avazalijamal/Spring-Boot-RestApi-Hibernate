@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML faylının versiyası və kodlaşdırması -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> <!-- Maven POM faylının namespace və schema -->
+
+	<modelVersion>4.0.0</modelVersion> <!-- POM model versiyası -->
+
+	<parent> <!-- Bu layihə üçün parent layihənin məlumatları -->
+		<groupId>org.springframework.boot</groupId> <!-- Parent layihənin groupId-si -->
+		<artifactId>spring-boot-starter-parent</artifactId> <!-- Parent layihənin artifactId-si -->
+		<version>3.5.0</version> <!-- Parent layihənin versiyası -->
+		<relativePath/> <!-- Parent layihəyə lokal yolda baxmır, repozitoriyadan çəkir -->
+	</parent>
+
+	<groupId>com.example</groupId> <!-- Bu layihənin groupId-si (paketin unikal adı) -->
+	<artifactId>authdemo</artifactId> <!-- Layihənin adı/artifact ID-si -->
+	<version>0.0.1-SNAPSHOT</version> <!-- Layihənin versiyası, burada "SNAPSHOT" inkişaf mərhələsində olduğunu bildirir -->
+	<name>authdemo</name> <!-- Layihənin oxunaqlı adı -->
+	<description>Demo project for Spring Boot</description> <!-- Layihənin qısa təsviri -->
+	<url/> <!-- Layihənin URL-i, buraxılıb -->
+
+	<licenses> <!-- Layihənin lisenziyası -->
+		<license/> <!-- Lisenziya məlumatı buraxılıb -->
+	</licenses>
+
+	<developers> <!-- Layihənin inkişaf etdiriciləri -->
+		<developer/> <!-- İnkişaf etdirici məlumatları buraxılıb -->
+	</developers>
+
+	<scm> <!-- Source Control Management (versiya idarəetmə) -->
+		<connection/> <!-- SCM bağlantısı buraxılıb -->
+		<developerConnection/> <!-- İnkişaf etdirici bağlantısı buraxılıb -->
+		<tag/> <!-- SCM tag buraxılıb -->
+		<url/> <!-- SCM URL buraxılıb -->
+	</scm>
+
+	<properties> <!-- Layihə xüsusiyyətləri -->
+		<java.version>17</java.version> <!-- Java versiyası, burada 17-dir -->
+	</properties>
+
+	<dependencies> <!-- Layihənin istifadə etdiyi kitabxanalar -->
+
+		<dependency> <!-- Spring Data JPA starter -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId> <!-- JPA üçün starter, verilənlər bazası əməliyyatları üçün -->
+		</dependency>
+
+		<dependency> <!-- Spring Web starter -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId> <!-- Web tətbiqi üçün starter (REST API və s.) -->
+		</dependency>
+
+		<dependency> <!-- Spring Boot Devtools -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId> <!-- İnkişaf mərhələsində təkrar yükləmə və digər alətlər üçün -->
+			<scope>runtime</scope> <!-- Yalnız runtime zamanı yüklənir -->
+			<optional>true</optional> <!-- Asılılıq seçmədir, digər layihələrə ötürülmür -->
+		</dependency>
+
+		<dependency> <!-- PostgreSQL sürücüsü -->
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId> <!-- PostgreSQL verilənlər bazası üçün sürücü -->
+			<scope>runtime</scope> <!-- Yalnız runtime zamanı tələb olunur -->
+		</dependency>
+
+		<dependency> <!-- Test starter -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId> <!-- Test yazmaq üçün alətlər -->
+			<scope>test</scope> <!-- Yalnız test mərhələsində istifadə olunur -->
+		</dependency>
+
+		<dependency> <!-- Spring Security starter -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId> <!-- Təhlükəsizlik funksionallığı üçün starter -->
+		</dependency>
+
+	</dependencies>
+
+	<build> <!-- Layihənin build (yığılma) konfiqurasiyası -->
+		<plugins> <!-- Pluginlər -->
+			<plugin> <!-- Spring Boot Maven Plugin -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId> <!-- Layihəni asanlıqla run və paketləmək üçün plugin -->
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
